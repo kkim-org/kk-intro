@@ -12,6 +12,11 @@ pipeline {
         sh 'java -version'
       }
     }
+    stage('Checkpoint') {
+      steps {
+        checkpoint 'Checkpoint'
+      }
+    }
     stage('Testing') {
       failFast true
       parallel {
